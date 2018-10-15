@@ -21,6 +21,7 @@ class DBquery
 	private $db;
 	function __construct($user = 'root',$pass = '') {
 		$db = new PDO('mysql:host=localhost;dbname=devm3d;charset=utf8', $user, $pass);
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->db = $db;
 	}  
 	/**
