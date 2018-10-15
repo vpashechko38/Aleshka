@@ -8,7 +8,7 @@ $param = [ ":email" => $email ];
 $db = new DBquery();
 $query = $db->queryRow($sql, $param);
 print_r($query);
-$checkLicense = ""
-$INN = $query['INN']==null?"goaddinfoorgan":"goaddorders";
-print_r($INN);
+$checkPas = password_verify($password, $query['password'])?'true':'false';
+//$INN = $query['INN']==null?"goaddinfoorgan":"goaddorders";
+print_r($checkPas);
 ?>

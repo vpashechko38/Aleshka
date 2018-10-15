@@ -17,4 +17,5 @@ $param = [
     "LifeTime"=>$d->format('Y-m-d')];
 $IdLicense = $db->insert('Licenses',$param);
 print_r($IdLicense);
+print_r($newUserId);
 ?>
