@@ -19,10 +19,10 @@ $db->update('users', array('name' => 'UpdatedName'), 'id=:id', array(':id' => $n
 class DBquery
 {
 	private $db;
-	function __construct($user = 'm3ddev',$pass = '0C5I0L5j') {
-		$db = new PDO('mysql:host=94.250.254.161;dbname=devm3d;charset=utf8', $user, $pass);
+	function __construct($user = 'root',$pass = '') {
+		$db = new PDO('mysql:host=localhost;dbname=devm3d;charset=utf8', $user, $pass);
 		$this->db = $db;
-	}
+	}  
 	/**
 	 * Добавление записи в таблицу
 	 * @param  [string] $table        [Название таблицы]

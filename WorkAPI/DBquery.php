@@ -20,7 +20,7 @@ class DBquery
 {
 	private $db;
 	function __construct($user = 'root',$pass = '') {
-		$db = new PDO('mysql:host=localhost;dbname=library;charset=utf8', $user, $pass);
+		$db = new PDO('mysql:host=localhost;dbname=devm3d;charset=utf8', $user, $pass);
 		$this->db = $db;
 	}
 	/**
