@@ -6,8 +6,8 @@ $password = $_POST['password'];
 $param = [
  "Email"=>$email, 
  "Password"=>password_hash($password, PASSWORD_DEFAULT)];
-//$db = new DBquery();
-//$newUserId = $db->insert('partners', $param);
+$db = new DBquery();
+$newUserId = $db->insert('partners', $param);
 // $d= new DateTime();
 // $d->modify('+1 month');
 // $password = $password.$email.'pakaded';
@@ -17,5 +17,5 @@ $param = [
 //     "LifeTime"=>$d->format('Y-m-d')];
 // $IdLicense = $db->insert('Licenses',$param);
 // print_r($IdLicense);
-print_r('success');
+print_r($newUserId);
 ?>
